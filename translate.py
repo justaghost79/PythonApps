@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter.ttk import Notebook
 import requests
+from tkinter import messagebox
 
 class Translate (tk.Tk):
 
@@ -14,8 +15,10 @@ class Translate (tk.Tk):
             response.raise_for_status()
             print(response.json())
             self.spanish_translation.set(response.json()[0][0][0])
+            messagebox.showinfo("Translated", "Translation Complete")
         except Exception as e:
             print(e)
+            messagebox.showerror("Translation failure", str(e))
         
     def __init__(self):
 
