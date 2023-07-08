@@ -3,6 +3,9 @@ from flask import Flask
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return "Welcome to the jungle, baby!"
+    return "<h1>Welcome to the jungle, baby!</h1>"
+@app.route('/aboutMe')
+def aboutMe():
+    return "About me!"
 if __name__ == '__main__':
     app.run()
