@@ -7,5 +7,13 @@ def start_round(loaded_word):
     print("\n")
     print(hidden_word)
 
+    guessed = False
+
+    tries = 6
+
+    while not guessed and tries > 0:
+        guess = input("Guess a letter or the full word you little scamp!")
+
+
 loaded_word = load_word()
 start_round(loaded_word)
