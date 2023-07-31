@@ -1,11 +1,12 @@
 def find_subsets(arr):
+    
     subsets= []
     subsets.append([])
 
     for value in arr:
 
         for i in range(len(subsets)):
-            set= subsets[i].copy()
+            set = subsets[i].copy()
             set.append(value)
             subsets.append(set)
 
